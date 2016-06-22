@@ -3,12 +3,23 @@ package main
 import (
 	"fmt"
 	//"time"
+	"bufio"
+	"os"
+	"strings"
 )
 
 func main() {
 	//starttime := time.Now()
+	input := bufio.NewReader(os.Stdin)
+	r, _ := input.ReadString('\n')
+	t := strings.TrimRight(r, "\n")
+	fmt.Println("下面用的是scanf不能有空格")
+	var a string
+	fmt.Scanln(&a)
 	s := "hello，golang"
 	fmt.Println(reverseString(s))
+	fmt.Println(reverseString(a))
+	fmt.Println(reverseString(t))
 	//fmt.Println(time.Now().Sub(starttime))
 	//fmt.Println(reverseString(reverseString(s)))
 }
